@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1200 Logo Drawing Animation</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <main class="stage">
+    <div class="logo-container">
+
+    <svg class="logo" viewBox="0 0 1200 1200" role="img" aria-label="S logo">
+      <defs>
+        <mask id="logo-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="1200">
+          <rect width="1200" height="1200" fill="black"/>
+          <path
+            class="draw-path"
+            d="M1056 224H611.227C547.688 226.258 407.902 254.196 357.071 347.882C293.532 464.988 357.071 538.059 357.071 542.414C357.071 546.77 452.14 619.84 526.667 622.26C586.289 624.196 705.66 623.067 757.892 622.26C803.596 626.293 892.423 666.78 882.104 796.468C871.785 926.157 789.263 970.193 749.293 976H144"
+            fill="none"
+            stroke="white"
+            stroke-width="270"
+            stroke-linecap="butt"
+            stroke-linejoin="round"
+          />
+        </mask>
+      </defs>
+
+      <image
+        href="1200logo.png"
+        width="1200"
+        height="1200"
+        mask="url(#logo-mask)"
+      />
+    </svg>
+
+    <!-- 同じPNGと同じマスクの解析表示 -->
+    <section class="analysis">
+      <svg class="logo" viewBox="0 0 1200 1200" role="img" aria-label="マスク領域を表示したS logo">
+        <defs>
+          <mask id="logo-mask-analysis" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="1200">
+            <rect width="1200" height="1200" fill="black"/>
+            <path
+              class="draw-path"
+              d="M1056 224H611.227C547.688 226.258 407.902 254.196 357.071 347.882C293.532 464.988 357.071 538.059 357.071 542.414C357.071 546.77 452.14 619.84 526.667 622.26C586.289 624.196 705.66 623.067 757.892 622.26C803.596 626.293 892.423 666.78 882.104 796.468C871.785 926.157 789.263 970.193 749.293 976H144"
+              fill="none"
+              stroke="white"
+              stroke-width="270"
+              stroke-linecap="butt"
+              stroke-linejoin="round"
+            />
+          </mask>
+        </defs>
+
+        <image
+          href="1200logo.png"
+          width="1200"
+          height="1200"
+          mask="url(#logo-mask-analysis)"
+        />
+
+        <!-- Figmaの中心線を太くした、実際のマスク領域 -->
+        <path
+          class="draw-path"
+          d="M1056 224H611.227C547.688 226.258 407.902 254.196 357.071 347.882C293.532 464.988 357.071 538.059 357.071 542.414C357.071 546.77 452.14 619.84 526.667 622.26C586.289 624.196 705.66 623.067 757.892 622.26C803.596 626.293 892.423 666.78 882.104 796.468C871.785 926.157 789.263 970.193 749.293 976H144"
+          fill="none"
+          stroke="#ff405c"
+          stroke-opacity=".3"
+          stroke-width="270"
+          stroke-linecap="butt"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </section>
+    </div>
+  </main>
+</body>
+</html>

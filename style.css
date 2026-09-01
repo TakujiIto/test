@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #000;
+}
+
+.stage {
+  min-height: 260svh;
+}
+
+.logo-container {
+  width: min(92vw, 1100px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 4vw, 56px);
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.analysis {
+  min-width: 0;
+}
+
+/* マスクSVGを伸ばす */
+.draw-path {
+
+      /* 破線 */
+  stroke-dasharray: 2600 2600; 
+  /* 2600ずらす */
+  stroke-dashoffset: 2600;   
+  animation: draw 1.4s linear forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .draw-path {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
